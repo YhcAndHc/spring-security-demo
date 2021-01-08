@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yhc.demo.dao.UserMapper">
+
+	<sql id="Base_Column_List">
+		id, user_name, user_pwd
+	</sql>
+
+	<sql id="Where_List">
+		<where>
+			<if test="id != null">
+				and id = #{id}
+			</if>
+			<if test="userName != null">
+				and user_name = #{userName}
+			</if>
+			<if test="userPwd != null">
+				and user_pwd = #{userPwd,typeHandler=com.yhc.demo.dao.typehanler.UserPwdTypeHandler}
+			</if>
+		</where>
+	</sql>
+
+	<select id="select"
+		parameterType="com.yhc.demo.entity.UserEntity"
+		resultType="com.yhc.demo.entity.UserEntity">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM user
+		<include refid="Where_List" />
+	</select>
+
+	<select id="selectByName"
+		resultType="com.yhc.demo.entity.UserEntity">
+		SELECT
+		<include refid="Base_Column_List" />
+		FROM user
+		WHERE user_name = #{userName}
+	</select>
+
+</mapper>

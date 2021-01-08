@@ -1,0 +1,24 @@
+{"properties": [
+  {
+    "name": "jwt.expiration",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.expiration'"
+  },
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.secret'"
+  },
+  {
+    "name": "login.uri",
+    "type": "java.lang.String",
+    "description": "A description for 'login.uri'"
+  },
+   {
+    "name": "jwt.filter.uri.list",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.filter.uri.list'"
+  }
+  
+  
+]}

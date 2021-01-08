@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+</head>
+
+<body
+	style="height: 500px; width: 500px; margin: 0 auto;; margin-top: 50px">
+	请登录:
+	<!-- 作者是后台开发，基本没做过前端，所以大家将就看下把，登录成功跳转我就不写逻辑了 -->
+	<form id="loginForm" action="/login.do" method="post">
+		<br /> 用户名: <input type="text" name="username"
+			style="height: 20px; margin-top: 10px"><br />
+		<br /> 密&nbsp;&nbsp;&nbsp;码: <input type="password" name="userpwd"
+			style="height: 20px; margin-top: 10px"><br />
+		<br />
+			验证码:<!--  一般此处需要做点击刷新处理 -->
+			<input type="text" name="captcha"  style="height:20px; margin-top: 10px">
+			<a href="javascript:changeImg();" rel="external nofollow" title="点击更换验证码">
+				<img id="img" src="/captcha.jpg" alt="#">
+			</a><br/><br/> 
+			<!-- <input type="submit" value="登录"> -->
+		<button id="loginBtn" type="button" onclick="login()">登录</button>
+
+	</form>
+</body>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script>
+	function login() {
+		$.ajax({
+			type : "POST",
+			url : "/login.do",
+			data : $("#loginForm").serialize(),
+			dataType : "JSON",
+			beforeSend: function(request) {
+				var storage = window.localStorage;
+			     request.setRequestHeader("tk", storage.getItem("userTK"));
+			},
+			success : function(data) {
+				console.log(data);
+				var storage = window.localStorage;
+				if(data.code=="000000"){
+					var tk = data.data.tks;
+					storage.setItem("userTK",tk);
+					// 因我不熟悉前端，此处直接使用路径参数，实际开发请放置到Header
+					window.location.href = 'home?Authorization='+tk;
+				}else{
+					alter(data.message);
+				}
+				
+			}
+		});
+
+	};
+
+	function changeImg() {
+		document.getElementById("img").src = "/captcha.jpg?r=" + Math.random();
+	};
+</script>
+</html>
