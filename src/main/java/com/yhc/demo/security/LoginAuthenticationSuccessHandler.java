@@ -19,6 +19,12 @@ import com.yhc.demo.dto.login.UserLoginResponse;
 import com.yhc.demo.plugin.JwtService;
 import com.yhc.demo.util.ResultUtil;
 
+/**
+ * 登录认证失败处理
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 @Configuration
 public class LoginAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
 	

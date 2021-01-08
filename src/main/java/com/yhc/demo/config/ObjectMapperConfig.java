@@ -14,6 +14,12 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalTimeSerializer;
 
+/**
+ * 返回数据格式化处理
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 @Configuration
 public class ObjectMapperConfig {
 

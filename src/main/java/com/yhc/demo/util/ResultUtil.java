@@ -11,6 +11,12 @@ import com.yhc.demo.consts.SystemValue;
 import com.yhc.demo.dto.BaseResult;
 import com.yhc.demo.exception.ServiceException;
 
+/**
+ * 统一返回工具类
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 public class ResultUtil {
 
 	private static final String FAIL_CODE_PREFIX = SystemValue.APPLICATION_NAME + SystemValue.SYMBOL_BAR;

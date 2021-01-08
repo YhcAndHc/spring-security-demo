@@ -18,6 +18,12 @@ import com.yhc.demo.dao.ResourceRoleRelationMapper;
 import com.yhc.demo.dao.RoleMapper;
 import com.yhc.demo.entity.vo.UrlRolenameVo;
 
+/**
+ * 资源访问时，获取对应所需权限
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 @Configuration
 public class MyFilterInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
 	private static final Logger log = LoggerFactory.getLogger(MyFilterInvocationSecurityMetadataSource.class);

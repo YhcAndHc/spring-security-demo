@@ -26,6 +26,12 @@ import com.yhc.demo.service.UserService;
 import com.yhc.demo.util.CaptchaUtil;
 import com.yhc.demo.util.ResultUtil;
 
+/**
+ * 用户相关服务
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 @Controller
 public class UserController {
 

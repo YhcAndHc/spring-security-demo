@@ -5,6 +5,12 @@
 //import org.springframework.context.ApplicationContextAware;
 //import org.springframework.context.annotation.Configuration;
 //
+///**
+// * spring容器对象，便于动态获取bean对象
+// * @param <T>
+// * @author yhc
+// * @date 2021-1-8
+// */
 //@Configuration
 //public class StaticApplicationContextConfig<T> implements ApplicationContextAware {
 //

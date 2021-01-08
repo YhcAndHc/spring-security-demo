@@ -13,6 +13,12 @@ import org.springframework.security.core.GrantedAuthority;
 
 import com.yhc.demo.consts.RoleEnum;
 
+/**
+ * 访问权限校验
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 @Configuration
 public class MyAccessDecisionManager implements AccessDecisionManager {
 

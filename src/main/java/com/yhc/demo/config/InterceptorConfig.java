@@ -8,6 +8,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.yhc.demo.interceptor.ValidateCaptchaInterceptor;
 
+/**
+ * springboot拦截器配置
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
 

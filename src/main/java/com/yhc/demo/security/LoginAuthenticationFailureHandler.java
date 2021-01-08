@@ -13,6 +13,12 @@ import org.springframework.security.web.authentication.AuthenticationFailureHand
 import com.yhc.demo.consts.ResponseEnum;
 import com.yhc.demo.util.ResultUtil;
 
+/**
+ * 登录认证失败处理
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 @Configuration
 public class LoginAuthenticationFailureHandler implements AuthenticationFailureHandler {
 

@@ -4,10 +4,14 @@
 //import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 //import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 //
+///**
+// * 资源映射
+// * 
+// * @author yhc
+// * @date 2021-1-8
+// */
 //@Configuration
 //public class WebMvcConfig extends WebMvcConfigurationSupport {
-//
-//
 //
 //    @Override
 //    protected void addResourceHandlers(ResourceHandlerRegistry registry) {

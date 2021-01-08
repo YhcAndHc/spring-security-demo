@@ -55,15 +55,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(WebSecurity webSecurity) throws Exception {
-		// @formatter:off
-//		webSecurity.ignoring().antMatchers;
-		// @formatter:on
 	}
 
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		// @formatter:off
-        httpSecurity.authorizeRequests().withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
+        httpSecurity
+        	// 权限校验
+        	.authorizeRequests().withObjectPostProcessor(new ObjectPostProcessor<FilterSecurityInterceptor>() {
 		            @Override
 		            public <O extends FilterSecurityInterceptor> O postProcess(O o) {
 		                o.setSecurityMetadataSource(myFilterInvocationSecurityMetadataSource);

@@ -6,6 +6,12 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
+/**
+ * 图片验证码生成工具
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 public class Captcha {
 
 	// 图片的宽度
