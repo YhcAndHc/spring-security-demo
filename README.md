@@ -1,0 +1,4 @@
+# spring-security-demo
+该项目主要使用springbootsecurity结合jwt实现登录认证和权限校验。
+
+我主要是做JAVA的，对于前端不熟，jwt我是存储在localstorage的，如果能实现不同的域名能共享localstorage，则该项目可以直接拿来作为SSO项目使用。
