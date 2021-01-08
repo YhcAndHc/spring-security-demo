@@ -20,6 +20,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yhc.demo.exception.ServiceException;
 import com.yhc.demo.util.ServletUtil;
 
+/**
+ * 独立的日志打印切面
+ * 
+ * @author yhc
+ * @date 2021-1-8
+ */
 @Configuration
 @Aspect
 public class WebLogAop {
