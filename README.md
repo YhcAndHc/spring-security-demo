@@ -2,3 +2,4 @@
 该项目主要使用springbootsecurity结合jwt实现登录认证和权限校验。
 
 我主要是做JAVA的，对于前端不熟，jwt我是存储在localstorage的，如果能实现不同的域名能共享localstorage，则该项目可以直接拿来作为SSO项目使用。
+当然，大家可以存储到cookie，然后设置httpOnly属性，并实现cookie功能，即可以实现sso，这种方案是目前比较成熟的。
